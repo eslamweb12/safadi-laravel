@@ -1,0 +1,324 @@
+<?php 
+                     //*commnds line//*
+//commnd line for installation laravel 
+                    
+// "composer create-project laravel/laravel store";
+/*/
+//if i want to know what is the version of php that i use
+$phpVersion="php -v";
+/*/
+//vendor folder has all outside things that i will use or i will call ok
+/*/
+
+//if i want to run or to do any code in anu file i should write in the terminal <<php filename.php>>
+/*/
+
+//if i want to know the server of my project i will will write 
+//"php artisan serve";
+/***/
+//**what is the difference between define and const if i want to declare aconstant varible**/
+//<<--define if i want to declare in outside the namespace but if i want to declare in the namespace i should use cons
+/***/
+// how can we use autoload we are defining the class like the name of the file and the namespace like the structure of the folder
+/**/
+//what is the callback ==the call back is to تستدعي فنكشن عن طريق فنكشن تانيه
+//example 
+//class autloader{
+//     public static function register($classname){
+//         include __DIR__ ."/{$calssname}.php";
+
+//     }
+// }
+//** */
+// spl_autoload_register([aautloader::class,'register']);
+/**/ 
+//    interface,trait اي الفرق بين ال  
+//trait :use traitname بعمل ملف وبملي فيه الفنكشن بتاعتي وبكتب بقي**
+/**/
+//    interface:: prototype of the function بكتب ال 
+// class بعد كده هعمل اي هكتب بنيه الفنكشن دي ف ال   
+/**/ 
+// helper function that it is name is asset what is the importance of this function 
+//وظيفتها انك بتعطيها الباث نسبه للبابلك تمم وبترجعه بشكل صحيح من غير ما اغير فالمسار 
+//ex::{{ asset('plugins/fontawesome-free/css/all.min.css') }}
+/***/ 
+//notice that (view::make )=view
+//** */
+// ولكن بنغير الحاجات اللي بتتغير layouts  تمم هو بقي احنا بحط كل حاجه فال  layoutsاحنا كده فهمنا حوار ال 
+// بنعمل ملف بنستدعي فيه الحاجات اللي متغيره  view وبينجي فال @yieldطيب بمغيرها ازاي ينغيرها عن طريق ال ل
+//   @sectoin  and endsection عن طريق ال   
+//وبيهم الحاجات اللي بتتغير 
+// دي بتطبق الكبير او الاساسي بعد كده التاني  @parentفي حاجه اسمها 
+//@show دي بتخفي وبتعرض
+//@stop  دي بتوقف اللي بعديها
+///***/ */
+// js and css بس لملفات  yield  في اي بنستخدمها في لو عايز اعمل stack بنسخدم ال 
+//  @stack('اي اسم')طريقه كتابتها ازاي  
+//@push الكود
+//وبعد كده @end push
+/***/ 
+//'php artisan key:generate' envجديد فاال  key ده بيعمل اي بيعملي  
+//'php artisan config:cache' bootstrapفي ملف تاني في ملف اسمه  confige ده بيعمل اي بيحط كل ملفات ال
+//'php artisan config:clear'cache ده بيمسح الملف بتاع ال 
+//***//
+//null مستحيل يكون  primary اما ال null ممكن تكون  unique  الفرق انه ال 'unique' and 'primary'اي الفرق بين ال 
+/***/
+//انا عملتها step  وده هيوقف اخر  'php artisan migrate:rollback' اعمل اي  migration لو عايز اتراجع عن عمليه ال 
+//**** */
+//اللي هو فيها  table  بيشاور علي نفس الforegin key  ازاي اعمل 
+//$table->foreignId('parent_id','id)->nullable()->constrainde('categories','id')->nullOnDelete();
+//*** */
+// "php artisan migrate:status" اللي اتنفذت اكتب اى migration  لو عايز اعرف اي ال
+//'php artisan migrate:reset'اللي انا عملتها  migration  لو عايز اوقف كل ال 
+//"php artisan migrate:refresh"في وقت واحد tables  لكل ال  migrate وبعد كده بيعمل  rollback بيعمل 
+//"php artisan migrate:fresh"migrate وبعد كده بيعمل  migration لكل ال drop  بيعمل 
+// ***/
+//بس مفرد  table  اسميها باسم ال model  ملاحظه مهمه جدا هي اي بقي هي اني وانا بسمي ال
+//'php artisan make:model بس مفرد modelاسم ال' 
+/** */
+//'php artisan make:model product -m'بتاعها migration  وال model هيبني ال
+//** */
+//هنكتب اي model هنيجي فالokوانا عايز اربط الاتنين ببعض table غير اسم ال model لو اسم ال
+//' $protected $table='اللي هيتربط بيها table اسم ال' ;'
+//** */
+//  database لو عايز ال
+//' $protected $connection ='mysql'; '    هكتب  model هاجي فال
+//** */
+//او لا incrementing  اخليه  primary key لو عايز اتحكم ال 
+// '  $public $incrementing = true or false ;'     model هاجي فال 
+/* */
+// primary لو عايز نوع 
+//' $protected $keyType='int' ; ' model هكتب فال
+//** */
+//timestamp لو عايز اتحكم فال 
+//'$public timestamps=true or false;'
+//** */
+//primary لو عايز احدد ال 
+//' $protected primary ='id'; '
+//** */
+//timestamps لو عايز اغير اسم ال 
+//' const CREATED_AT='created_on'; '
+//' const UPDATED_AT='updated_on'; '
+//** */
+//seeder وده بستخدمه عشان اجرب الداتا بيز بتاعتي بس بيقي مش رسمي 
+//'php artisan make:seeder UseSeeder;'seeder ده عشان اعمل 
+//** */
+// encription وHash اي الفرق بين 
+//hash ::لاصله قبل التشفير password  بس مش هقدر ارجع ال password  ده بيشفر ال
+//encription ::decription لاصله قبل التشفير عن طريق حاجه اسمها  password  هقدر ارجع ال
+/** */
+//database insert  أزي اعمل 
+// //   1*    User::create([
+//                'name'=>'eslam elsayed',
+//                'email'=>'eslam.weka2002@gamil.com',
+//                'passward'=>Hash::make('passward'),
+//                'phone_number'=>'0111143274',
+
+//             ]);    او
+
+// //       User::table('users')->insert([
+//                'name'=>'mohamed ahmed',
+//                'email'=>'mohamedl@gamil.com',
+//                'passward'=>Hash::make('passward'),
+//                'phone_number'=>'0112336822',
+
+//             ]);
+//** auth */
+//'composer require laravel/breeze --dev ' breeze عشان ايبني ال 
+//'php artisan breeze:install'
+//'npm -v'شغال ولا لأ npm  عشان اشوف كم ال
+//'npm install' npm عشان اسطب ال
+//'npm run' public الي ال resourcesمن الcss,jsعشان انسخ الملفات من ال
+// 'npm run dev' => لو هنشئ ملفات واقدر اغير اعدل عليها 
+//'npm run prod' => لو هنشئ ملفات ولكن مش هقدر اعدل عليها   
+//'@if(Auth::check)' ولا لأauth عامل use لو عايز اتأكد ان ال
+
+//الكود اللي هيتنفذ 
+
+//@endif
+
+// او
+// '@auth' a uthاو طريفه اخري للتاكد من ال
+
+//الكود اللي هيتنفذ 
+
+//endauth
+// معين controller اللي جوه  functions معين يتطبق علي جميع ال middleware لو عايز 
+//middleware واحط فيه ال  controller جوه  conturct هاجي اعمل 
+//ex::public function __construct(){
+//        $this->middelware(['auth'])->except(['index']);=> indexدي ماعد ال functionsعلي ال middleware معناها طبق ال
+//         only('index')indexدي ماعدا ال functions معناها طبقه علي ال
+//     }
+//*** كود حماية الفورم*/
+//1-'@csrf' balde لو هستخدم 
+//2- '<input type="hidden" name="_token" value="{csrf_token()}">' baldeدي لو انا مش هستخدم 
+//3-'csrf_field' blade لو انا مش هستخدم 
+///**/ */
+//** redirect انواع ال   */
+//'return Redirect::route('dashboard');'ممكن اكبتها بالطريقه دي 
+//return redirect(RouteServiceProvider::HOME);او دي 
+//**/ */
+//'MAIL_MAILER=log'  .env عشان رسايل الخطا تظهر اخلي  موجوده في ملف ال
+//'ctrl+p' vs code لو عايز ابحث عن ملف معين جوه ال 
+//'php artisan make:controller Dashboard\CategoriesController -r'function s واحط فيه كل ال controllerدي لو انا عايز ابني فولدر جوه ال 
+//'Route::resource('dashboard/categories',CategoriesController::class);'controller بتاعت ال routes ده هينشئ كل ال
+//'php artisan route:list'اللي عندي route ده عشان اعرف اي ال
+//'table.table>thead>tr>th*4' مكونه من  4اعمده table لو عايز اعمل 
+//'tbody>tr>td*6' لو عايز اعمل الصفوف
+////**form method spoofing */
+//'<input type="hidden" name="method" value="delete">' baldeدي طريقه كتابتها لو مش هستنخدم ال
+//@method('delete') balde دي لو هستخدم ال 
+//** */
+// '<a href="{{route('')}}" class="btn btn-sm btn-outline-success">Edit</a>'   edit ال link دي عشان اعمل 
+// '<a href="{{route('')}}" class="btn btn-sm btn-outline-danger">delete</a>'   delete ال link دي عشان اعمل 
+///** forelse مع بعض  if , foreachفي حاجه بدل ما استخدم */
+//@forelse($categories as category)
+//    كود معين
+// @empty   
+//    كود اخر       
+//endforelse       
+/** request طرق الوصول للداتا اللي فال */
+//'$request->input('name'); '
+//'$request->post('name');'
+//'request->query('name');'
+//'$request->name; '
+//'$request['name']';
+//'request->all();'
+//'request->only(['name','image']); '
+//'request->except(['name','image']); '
+//' $category=Category::create($request->all());'
+//** guardedوالfillableاي الفرق بين ال */
+//'protected $fillable= ['name','email']' اللي هتتملي colmsال
+//'protected $guarded=['slug']' اللي مش هتتملي colmsال
+//**داتااضافيه $requestلو عايز اضيف ع ال */
+//        $request->merge([
+//     'slug'=>Str::slug($request->post('name'))
+//       ]);
+//** veyfiy عشان اخلي الميل يتعمله  */
+//'Must Verify Email' من  implements يعمل  class هخلي ال user بتاعت ال  model فال 
+//**route لو عايز اطبق كذا حاجه علي نفس ال */
+// // Route::group([
+//     'middleware'=>['auth'],
+//      'as' => 'dashboard.',
+//      'prefix'=>' dashboard',
+
+
+
+//    ],function(){
+//     Route::get('/',[dashboardController::class,'index']) 
+//     ->name('dashboard');
+
+
+
+//     Route::resource('/categories',CategoriesController::class);   
+
+// });
+//**form وعايز اغير عليها فال  selected لو عامل   */
+//'@selected($category->parent_id==$parent->id)'
+//  ,هنراجع الفيديو التاسع والثاني فال  من الدقيقه34:38
+/** data لل  update  عشان اعمل */
+// 1-$category->update($request->all());    دي اؤل طريقه
+//2-$category->fill($request->all())->save();
+//** لو عايز ابينله صفحه 404اعمل اي */
+//if(!$category){
+//     abort(404); معناها اظهرلي الصفحه دي لما ما تلاقيش الحاجه دي
+//  }
+//or
+// findorfail($id);
+//** لو عايز اعمل عمليه حذف بشكل مباشر */
+//category::destroy($id)
+//or 
+//$category=category::findOrFail($id);
+//$category->delete();
+//**معقده  query  ازاي اكتب  */
+//        $parents = category::where('id','<>', $id)
+//       ->whereNuLL('parent_id' )
+//       ->orwhere('parent_id','<>',$id)
+//       ->get();
+///**لو عايز ارفع صوره  */
+//    $data=$request->except('image');
+// if($request->hasFile('image')){
+//     $file=$request->file('image');
+//     $path=$file->store('uploads','public');
+//     $data['image']=$path; 
+//     }
+//هنراجع الدقيقه من 29الي 33فالفيديو العاشر
+//**لو عايز انشأ ملف اخزن فيه الصور */
+//        'uploads' => [
+//     'driver' => 'local',
+//     'root' => public_path('uploads'),
+//     'url' => env('APP_URL').'/uploads',
+//     'visibility' => 'public',
+//     'throw' =>false,
+//     ],
+//**لما اكون عايز اعمل link */
+// 
+// 'links' => [
+//     public_path('storage') => storage_path('app/public'),
+//  ],
+//** لو عايز اغير الصوره اعمل اي يعني احذف الصوره القديمه ااحط الجديده*/
+//        if($old_image && $data['image']){
+//     storge::disk('public')->delete($old_image);
+//    }
+//**لو عايز ارفع الصوره اعملها فنكشن لوحدها */
+//    protected function uploadFile(Request $request){
+//     if(!$request->hasFile('image'))
+//     {
+//         return;
+//     }
+//     $file=$request->file('image');
+//     $path=$file->store('uploads',[
+//         'disk'=>'public'
+//     ]);
+     
+//     $data['image']=$path;
+//     return $path;
+//     }
+////**لو عايز اخلي الملف اللي هيرفعه صوره بس  */
+// accept="image/*" image بتاع الinput  هاجي فال 
+//**class="@error('name) is-invalid" لما يكون لازم الحقل يتملي بحط فال  validation  في ال */
+//** errorكدا في كذا طريقه بنطبع بيهاال */
+//**validation باستخدمها فال  old( 'القيمه الجديده','القيمه القديمه' ) في حاجه اسمها  */      
+// 'php artisan make:request CategoryRequest' خاص بيا انا  request لو عايز اعمل 
+//لو عايز اخلي مثلا الاسم مينفعش احط فيه اسماء معنيه 
+//                 function ($attribute,$value,$fails){
+//                    if(strtolower($value)=='laravel'){
+//                       $fails("this is name is forbidden");
+//                    }
+//                },
+//لو عايز اخلي مجموعه كلمات مممنوعه 
+//'php artisan make:component alert --view' اعمل اي component لو عايز انشا 
+//**pagination عن طريق استخدام ال  next وال previous  بنعمل ال /
+/*/في اي  factory بستخدم ال*
+//بستخدمها في اني اضيف داتا وهميه ف الداتا بيز
+//**/
+//اكتبه ازاي validation لو عندي اكثر من قيمه لعمود فاداتابيز وعايز اعمله 
+//        'gender'=>['in:male,female'],
+//فالحدف والاضافه many to many في علاقات ال sync  بستخدم ال
+//accessor مش موجوده اصلا هستخدم اي هستخدم ال attribute  لو انا بستدعي 
+
+// submit لما اكون عايز ارسل الفورم بدون ما احط الزرار بتاع ال
+//<select name="currency_code" onchange="this.form.submit()">
+
+////*////
+localization ال
+واكتب فيه الحاجات اللي هتتغير او المتغيرات واعمل اي  json من نوع  app مثلا وليكن  lang عشان اغير بعمل ملف ف ال   
+هاجي بقي فالصفحه اللي فيها المتغرات مثلا انا عملت 
+ar.json
+وهكتب فيه الاتي
+{
+    'Home' : "مرحبا ي صديقي العزيز ",
+
+}
+هعمل هناك بقي فالفرونت {__('Home') }         دي كده هتتغير او هتترجم للي انا كاتبه فيه
+
+
+
+
+
+
+
+
+
+
+
